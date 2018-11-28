@@ -2,21 +2,15 @@ const express = require("express");
 const path = require("path");
 
 const complements = [
-    "you look nice today",
-    "that dress looks great",
-    "have you been working out?",
-    "you can do hard things",
-    "you've gotten far in this course, easier than you thought",
-    "you're programming, how cool is that?",
-    "go team",
-    "you're so smart",
-    "nice hair",
-    "nice computer",
-    "you smell good",
-    "you have a nice shirt",
-    "you're nice",
-    "nice eyes",
-    "nice beard"
+    "You like nice today",
+    "That dress looks nice on you",
+    "Have you been working out?",
+    "You can do hard things",
+    "You've gotten far in this course. You're really smart",
+    "You're programming! How cool is that?",
+    "I'm really proud of you",
+    "You made this",
+    "You've learned a lot of things, and that's pretty hard to do"
 ];
 
 function getRandomComplement() {
