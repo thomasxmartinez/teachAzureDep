@@ -20,15 +20,15 @@ const complements = [
 ];
 
 function getRandomComplement() {
-    const randomIndex = Math.floor(Math.random() * complements.length)
+    const randomIndex = Math.floor(Math.random() * complements.length);
     return complements[randomIndex];
 }
 
 const app = express();
 
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"))
-})
+    res.sendFile(path.join(__dirname, "index.html"));
+});
 
 app.get("/complement", function(req, res) {
     res
@@ -36,17 +36,10 @@ app.get("/complement", function(req, res) {
             complement: getRandomComplement()
         })
         .end();
-})
+});
 
-app.use("/public", express.static("./public"))
+app.use("/public", express.static("./public"));
 
 const port = process.env.PORT || 3000;
 app.listen(port);
 console.log(`listening on http://localhost:${port}`);
-
-////////////////THIS IS HOMEWORK TO BE DONE PRIOR TO COMING IN TUESDAY////////////////
-//Add it to GitHub in its own repo
-// Make an /insult endpoint that returns random insults to be hurled at your foes. Add another button to be able to request insults on your page.
-// Use Parcel and PopMotion to animate your page. Parcel has a parcel build index.html see here command that you could have it build your project into your public folder.
-// Style the whole page nicely using CSS! Put your CSS in your public folder and include it the <head></head> of your index.html
-////////////////THIS IS HOMEWORK TO BE DONE PRIOR TO COMING IN TUESDAY////////////////
